@@ -57,7 +57,10 @@ public class CountryRepositoryTest {
     void tesPopulationParPays() {
     	log.info("On vérifie que le nombre de ligne correspond au nombre de pays");
     	assertEquals(countryDAO.popParPays().size(),3 , "le nombre de ligne doit être égal au nombre de pays" );
-    	
+    	log.info("On vérifie que la valeur de la population pour le premier pays (france) correspond bien");
+
+    	assertEquals(countryDAO.popParPays().get(0).getPop(), 12, "test de la première ligne");
+
     }
     
 
